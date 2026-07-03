@@ -21,7 +21,7 @@ import { COMPETENCIES, ABOUT_BIO, ABOUT_TAGS } from '../portfolio.data';
           <div class="col-lg-4" appReveal> 
             <div class="profile-circle mb-4 overflow-hidden d-flex align-items-center justify-content-center mx-auto">
               <img 
-                src="/images/profile.png" 
+                src="/assets/images/profile.png" 
                 alt="Ibbad Arshad Profile Picture" 
                 class="img-fluid" 
                 style="width: 100%; height: 100%; object-fit: cover;"
@@ -67,8 +67,8 @@ import { COMPETENCIES, ABOUT_BIO, ABOUT_TAGS } from '../portfolio.data';
     .profile-circle {
       aspect-ratio: 1 / 1;
       border-radius: 50%;
-      border: 4px solid var(--border-neutral, #333945);
-      max-width: 280px; /* Restricts scaling width on extra-large displays */
+      border: 1px solid var(--border-neutral, #333945);
+      max-width: 360px; /* Restricts scaling width on extra-large displays */
     }
 
     /* Fixed Progress Bar Animation Styles */
