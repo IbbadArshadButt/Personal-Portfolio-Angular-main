@@ -23,7 +23,7 @@ import { COMPETENCIES, ABOUT_BIO, ABOUT_TAGS } from '../portfolio.data';
             <!-- Profile Image Container -->
             <div class="profile-frame mb-4 overflow-hidden d-flex align-items-center justify-content-center">
               <img 
-                src="assets/images/profile.jpg" 
+                src="assets/images/profile.png" 
                 alt="Ibbad Arshad Profile Picture" 
                 class="img-fluid" 
                 style="width: 100%; height: 100%; object-fit: cover;"
