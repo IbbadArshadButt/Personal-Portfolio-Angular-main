@@ -11,7 +11,7 @@ import { NAV_LINKS } from '../portfolio.data';
     >
       <div class="container">
         <a class="navbar-brand" href="#hero">
-          Ibbad<span class="brand-dot">.</span>Arshad
+          Ibbad<span class="brand-dot">.</span>
         </a>
 
         <button

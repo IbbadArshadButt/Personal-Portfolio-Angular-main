@@ -10,26 +10,24 @@ import { COMPETENCIES, ABOUT_BIO, ABOUT_TAGS } from '../portfolio.data';
     <section id="about" class="section">
       <div class="container">
         <div class="text-center mb-5" appReveal>
-          <p class="section-eyebrow mb-2">01 — About</p>
+          <p class="section-eyebrow mb-2">01 - About</p>
           <h2 class="section-title">A bit about me</h2>
           <p class="section-subtitle">
-            Developer, designer-minded, and obsessed with the details that make software feel intentional.
+            Developer, solution-oriented, and obsessed with the details that make software feel intentional.
           </p>
         </div>
 
         <div class="row g-5 align-items-start">
-          <!-- Left: profile + bio + tags -->
-          <div class="col-lg-5" appReveal>
-            <!-- Profile Image Container -->
-            <div class="profile-frame mb-4 overflow-hidden d-flex align-items-center justify-content-center">
+          <div class="col-lg-4" appReveal> 
+            <div class="profile-circle mb-4 overflow-hidden d-flex align-items-center justify-content-center mx-auto">
               <img 
-                src="assets/images/profile.png" 
+                src="/images/profile.png" 
                 alt="Ibbad Arshad Profile Picture" 
                 class="img-fluid" 
                 style="width: 100%; height: 100%; object-fit: cover;"
               />
             </div>
-
+            
             <p class="text-secondary mb-4" style="line-height: 1.75;">
               {{ bio }}
             </p>
@@ -41,8 +39,7 @@ import { COMPETENCIES, ABOUT_BIO, ABOUT_TAGS } from '../portfolio.data';
             </div>
           </div>
 
-          <!-- Right: core competencies -->
-          <div class="col-lg-7" appReveal [revealDelay]="120">
+          <div class="col-lg-8" appReveal [revealDelay]="120">
             <h3 class="h5 mb-4 text-uppercase" style="letter-spacing: 0.08em; font-size: 0.95rem; color: var(--text-secondary);">
               Core Competencies
             </h3>
@@ -55,7 +52,7 @@ import { COMPETENCIES, ABOUT_BIO, ABOUT_TAGS } from '../portfolio.data';
                     <span class="text-accent fw-semibold" style="font-size: 0.9rem;">{{ c.level }}%</span>
                   </div>
                   <div class="progress-thin">
-                    <div class="progress-bar" [style.width.%]="c.level"></div>
+                    <div class="progress-bar" [style.width]="c.level + '%'"></div>
                   </div>
                 </div>
               }
@@ -65,6 +62,38 @@ import { COMPETENCIES, ABOUT_BIO, ABOUT_TAGS } from '../portfolio.data';
       </div>
     </section>
   `,
+  styles: [`
+    /* Perfect Circle Styling */
+    .profile-circle {
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      border: 4px solid var(--border-neutral, #333945);
+      max-width: 280px; /* Restricts scaling width on extra-large displays */
+    }
+
+    /* Fixed Progress Bar Animation Styles */
+    .progress-thin {
+      background-color: var(--bg-neutral-dark, rgba(255, 255, 255, 0.05));
+      border-radius: 4px;
+      overflow: hidden;
+      height: 6px;
+      width: 100%;
+    }
+
+    .progress-bar {
+      background-color: var(--accent-color, #6366f1);
+      height: 100%;
+      border-radius: 4px;
+      /* Animates the line fill on initial load or change natively */
+      transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1); 
+    }
+
+    /* Hover effect for the whole block to add depth */
+    .competency-card:hover .progress-bar {
+      filter: brightness(1.2);
+      box-shadow: 0 0 8px var(--accent-color, #6366f1);
+    }
+  `]
 })
 export class AboutComponent {
   bio = ABOUT_BIO;

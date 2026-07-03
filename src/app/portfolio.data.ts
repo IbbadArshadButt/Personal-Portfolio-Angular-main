@@ -50,9 +50,10 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const COMPETENCIES: Competency[] = [
-  { label: 'Frontend Development', level: 92 },
-  { label: 'Architecture Management', level: 85 },
-  { label: 'Scalable Design', level: 88 },
+  { label: 'Software Development', level: 80 },
+  { label: 'Web Application Development', level: 86 },
+  { label: 'Frontend Development', level: 70 },
+  { label: 'Backend Development', level: 90 },
   { label: 'Full Stack Development', level: 80 },
 ];
 
@@ -125,11 +126,11 @@ export const TECH_CATEGORIES: TechCategory[] = [
     label: 'Frontend',
     icon: 'bi-window-stack',
     skills: [
-      { name: 'Angular', level: 95 },
-      { name: 'TypeScript', level: 92 },
+      { name: 'Angular', level: 80 },
+      { name: 'TypeScript', level: 82 },
       { name: 'JavaScript', level: 90 },
-      { name: 'Tailwind CSS', level: 85 },
-      { name: 'Bootstrap', level: 88 },
+      { name: 'React', level: 70 },
+      { name: 'Bootstrap', level: 84 },
     ],
   },
   {
@@ -137,11 +138,11 @@ export const TECH_CATEGORIES: TechCategory[] = [
     label: 'Backend',
     icon: 'bi-hdd-stack',
     skills: [
-      { name: '.NET / C#', level: 88 },
-      { name: 'Node.js', level: 78 },
+      { name: '.NET / C#', level: 74 },
+      { name: 'Node.js', level: 72 },
       { name: 'REST APIs', level: 90 },
-      { name: 'SignalR', level: 80 },
-      { name: 'Authentication', level: 82 },
+      { name: 'PHP', level: 70 },
+      { name: 'Python', level: 52 },
     ],
   },
   {
@@ -149,11 +150,11 @@ export const TECH_CATEGORIES: TechCategory[] = [
     label: 'Databases & Tools',
     icon: 'bi-database',
     skills: [
-      { name: 'SQL Server', level: 88 },
-      { name: 'PostgreSQL', level: 82 },
-      { name: 'Redis', level: 75 },
-      { name: 'Git', level: 92 },
-      { name: 'Docker', level: 78 },
+      { name: 'SQL Server', level: 76 },
+      { name: 'MongoDB', level: 70 },
+      { name: 'MySQL', level: 72 },
+      { name: 'Git', level: 80 },
+      { name: 'Azure DevOps', level: 70 },
     ],
   },
 ];
@@ -161,61 +162,64 @@ export const TECH_CATEGORIES: TechCategory[] = [
 export const EXPERIENCE: ExperienceItem[] = [
   {
     role: 'Frontend Design Intern',
-    company: 'Nexora Technologies',
-    period: 'Jun 2024 — Dec 2024',
-    location: 'Remote',
+    company: 'Adroit Light Solutions',
+    period: 'Jan 2025 — April 2025',
+    location: 'Onsite',
     summary:
-      'Built and refined Angular-based UI components for a client-facing analytics platform, partnering closely with design and backend teams.',
+      'Built clean UI components using HTML & vanilla CSS for elegant designs.',
     highlights: [
-      'Developed 20+ reusable Angular components following a strict design token system, improving cross-team consistency.',
-      'Reduced initial bundle size by 18% through lazy loading and tree-shaking unused dependencies.',
-      'Collaborated with designers to translate Figma mockups into pixel-accurate, accessible interfaces.',
-      'Wrote unit and integration tests raising frontend coverage from 54% to 81%.',
+      'Got to know about the fundamentals and basics of Web development.',
+      'Gain hands on experience with HTML & CSS for website design.',
+      'Worked under direct supervision of senior developers.',
     ],
-    environment: ['Angular', 'TypeScript', 'Tailwind CSS', 'Figma', 'Jest'],
+    environment: ['HTML5', 'CSS3', 'JavaScript'],
+    featured: false,
+  },
+  {
+    role: 'PHP Bckend Developer (Intern)',
+    company: 'The Next Code',
+    period: 'August 2025 — November 2025',
+    location: 'Onsite',
+    summary:
+      'Developed secure back-end logic, CRUD operations, and database configurations using PHP and MySQL databases.',
+    highlights: [
+      'Managed database tables and implemented using admin panel with backend PHP architecture.',
+      'Utilized AdminLTE framework for creating responsive admin dashboards.',
+      'Set up version control using Git & GitHub.',
+    ],
+    environment: ['PHP', 'JavaScript', 'MySQL', 'Filezilla', 'WordPress', 'Bootstrap'],
+    featured: false,
+  },
+  {
+    role: 'Trainee Software Engineer',
+    company: 'CureMD, Pakistan',
+    period: 'Jan 2026 — June 2026',
+    location: 'Onsite',
+    summary:
+      'Worked on web-based applications using JavaScript, Angular, C# and .NET. ',
+    highlights: [
+      'Developed .NET Web APIs using database first approach utilizing .NET Core with Angular Frontend.',
+      'Contributed to the development and enhancement of CureMD application’s features and functionalities.',
+      'Gained hands-on experience with database operations, debugging, and improving application performance.',
+      'Worked in agile development environment and directly communicated with team members and Project Manager',
+
+    ],
+    environment: ['Angular', 'TypeScript','.NET', 'SQL Server', 'GitHub Actions'],
     featured: true,
-  },
-  {
-    role: 'Full Stack Developer (Freelance)',
-    company: 'Independent',
-    period: 'Jan 2023 — May 2024',
-    location: 'Remote',
-    summary:
-      'Delivered end-to-end web applications for small businesses, owning architecture, implementation, and deployment.',
-    highlights: [
-      'Shipped 6 production applications spanning dashboards, landing pages, and internal tools.',
-      'Designed RESTful APIs in .NET and integrated them with Angular frontends.',
-      'Set up CI/CD pipelines and containerized deployments using Docker.',
-    ],
-    environment: ['Angular', '.NET', 'SQL Server', 'Docker'],
-    featured: false,
-  },
-  {
-    role: 'Open Source Contributor',
-    company: 'GitHub Community',
-    period: '2022 — Present',
-    location: 'Remote',
-    summary:
-      'Active contributor to Angular UI libraries and developer tooling, with a focus on accessibility and DX.',
-    highlights: [
-      'Merged 30+ pull requests across component libraries and CLI tooling.',
-      'Triaged community issues and reviewed contributions from new contributors.',
-    ],
-    environment: ['Angular', 'TypeScript', 'GitHub Actions'],
-    featured: false,
   },
 ];
 
 export const ABOUT_BIO =
-  'I am a software engineer focused on building clean, maintainable interfaces and the scalable systems behind them. I work primarily across Angular and .NET, and I care deeply about accessibility, performance, and the small details that make a product feel deliberate.';
+  'Software engineer with hands on experience building clean interfaces and the scalable systems behind them. I work primarily across Angular and .NET, and I focus on efficient debugging, high performance, and improved user experience.';
 
 export const ABOUT_TAGS = [
+  'JavaScript',
   'Angular',
   'TypeScript',
+  'Json',
   '.NET / C#',
-  'Tailwind CSS',
+  'Bootstrap',
   'SQL Server',
   'REST APIs',
-  'Docker',
-  'Accessibility',
+  'Azure DevOps',
 ];

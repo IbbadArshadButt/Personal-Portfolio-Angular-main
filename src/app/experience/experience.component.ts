@@ -10,10 +10,10 @@ import { EXPERIENCE } from '../portfolio.data';
     <section id="experience" class="section bg-elevated">
       <div class="container">
         <div class="text-center mb-5" appReveal>
-          <p class="section-eyebrow mb-2">04 — Experience</p>
+          <p class="section-eyebrow mb-2">03 — Experience</p>
           <h2 class="section-title">Where I've worked</h2>
           <p class="section-subtitle">
-            Roles where I've shipped real software and grown as an engineer.
+            Roles where I've worked on real software and grown as an engineer.
           </p>
         </div>
 

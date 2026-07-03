@@ -18,12 +18,11 @@ import { Component } from '@angular/core';
 
             <h1 class="hero-name mb-3">Ibbad Arshad</h1>
             <p class="hero-sub mb-4">
-              Crafting code that matters.
+              Software Engineer
             </p>
 
             <p class="text-secondary mx-auto mb-5" style="max-width: 560px;">
-              Software engineer focused on building clean, maintainable interfaces
-              and the scalable systems behind them across Angular and .NET.
+             I build applications that solve real-world problems.
             </p>
 
             <div class="d-flex flex-wrap justify-content-center gap-3">

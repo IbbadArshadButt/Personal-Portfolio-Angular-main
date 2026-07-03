@@ -15,9 +15,9 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     HeroComponent,
     AboutComponent,
-    ProjectsComponent,
     SkillsComponent,
     ExperienceComponent,
+    ProjectsComponent,
     ContactComponent,
     FooterComponent,
   ],
@@ -26,9 +26,9 @@ import { FooterComponent } from './footer/footer.component';
     <main>
       <app-hero />
       <app-about />
-      <app-projects />
       <app-skills />
       <app-experience />
+      <app-projects />
       <app-contact />
     </main>
     <app-footer />
