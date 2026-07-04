@@ -42,6 +42,31 @@ import { NAV_LINKS } from '../portfolio.data';
       </div>
     </nav>
   `,
+
+styles: [`
+/* Locate the container class for your mobile navigation menu overlay */
+.navbar-collapse, 
+.nav-menu.active,
+.mobile-overlay { /* Use whichever class matches your project's markup */
+  
+  /* 1. Force a solid dark background so the hero content underneath is hidden */
+  background-color: #0b0f19 !important; /* Matches your main primary dark theme background */
+  
+  /* 2. Push it to the top layer stack so it stays above the hero text */
+  z-index: 9999 !important;
+  
+  /* 3. Ensure it occupies full layout dimensions gracefully if it's a fullscreen overlay */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  
+  /* 4. Padding adjustment to prevent links from smashing into your logo header */
+  padding: 80px 24px 24px 24px; 
+}`
+]
+
 })
 export class NavbarComponent {
   links = NAV_LINKS;
