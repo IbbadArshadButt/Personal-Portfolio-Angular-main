@@ -1,4 +1,4 @@
-import { Component, HostListener, signal, inject } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { NAV_LINKS } from '../portfolio.data';
 
 @Component({
@@ -15,7 +15,7 @@ import { NAV_LINKS } from '../portfolio.data';
         </a>
 
         <button
-          class="navbar-toggler border-0"
+          class="navbar-toggler border-0 shadow-none text-white"
           type="button"
           (click)="toggleMenu()"
           aria-label="Toggle navigation"
@@ -42,31 +42,67 @@ import { NAV_LINKS } from '../portfolio.data';
       </div>
     </nav>
   `,
+  styles: [`
+    /* 1. Global Navbar Stack Elevation */
+    .navbar-portfolio {
+      z-index: 9999 !important;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
 
-styles: [`
-/* Locate the container class for your mobile navigation menu overlay */
-.navbar-collapse, 
-.nav-menu.active,
-.mobile-overlay { /* Use whichever class matches your project's markup */
-  
-  /* 1. Force a solid dark background so the hero content underneath is hidden */
-  background-color: #0b0f19 !important; /* Matches your main primary dark theme background */
-  
-  /* 2. Push it to the top layer stack so it stays above the hero text */
-  z-index: 9999 !important;
-  
-  /* 3. Ensure it occupies full layout dimensions gracefully if it's a fullscreen overlay */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  
-  /* 4. Padding adjustment to prevent links from smashing into your logo header */
-  padding: 80px 24px 24px 24px; 
-}`
-]
+    /* Accent brand highlight handling */
+    .brand-dot {
+      color: var(--accent, #ffc107);
+    }
 
+    /* 2. Responsive Mobile Drawer Override Rules */
+    @media (max-width: 991.98px) {
+      .navbar-collapse.show {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        /* Opaque solid layout color matching your primary dark background palette */
+        background-color: var(--bg-primary, #0b0f19) !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9998 !important; /* Positioned just beneath the toggler button icon layer */
+        padding: 80px 24px;
+        animation: fadeInMobile 0.25s ease forwards;
+      }
+
+      /* Stack items cleanly down the screen on mobile formats */
+      .navbar-nav {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-column: column !important;
+        gap: 1.5rem;
+      }
+
+      .nav-link {
+        font-size: 1.5rem; /* Larger touch targets on small screens */
+        color: var(--text-secondary, #8892b0) !important;
+      }
+
+      .nav-link.active {
+        color: var(--accent, #ffc107) !important;
+      }
+
+      /* Keep the closing menu toggle (X) fixed and visible in the upper right corner */
+      .navbar-toggler {
+        position: relative;
+        z-index: 9999 !important;
+      }
+    }
+
+    /* Simple fade entry animation for the screen overlay */
+    @keyframes fadeInMobile {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  `]
 })
 export class NavbarComponent {
   links = NAV_LINKS;
