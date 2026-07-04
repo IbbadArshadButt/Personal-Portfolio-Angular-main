@@ -10,7 +10,7 @@ import { TECH_CATEGORIES } from '../portfolio.data';
     <section id="skills" class="section">
       <div class="container">
         <div class="text-center mb-5" appReveal>
-          <p class="section-eyebrow mb-2">02 — Skills</p>
+          <p class="section-eyebrow mb-2">— Skills</p>
           <h2 class="section-title">Tech stack</h2>
           <p class="section-subtitle">
             The tools and technologies I reach for to design, build, and ship software.

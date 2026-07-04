@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
           <div class="col-lg-9 col-xl-8">
             <span class="hero-tag mb-4">
               <span class="status-dot"></span>
-              Available for new opportunities
+              Open to work
             </span>
 
             <h1 class="hero-name mb-3">Ibbad Arshad</h1>

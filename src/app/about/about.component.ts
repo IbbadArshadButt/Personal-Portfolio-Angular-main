@@ -10,7 +10,7 @@ import { COMPETENCIES, ABOUT_BIO, ABOUT_TAGS } from '../portfolio.data';
     <section id="about" class="section">
       <div class="container">
         <div class="text-center mb-5" appReveal>
-          <p class="section-eyebrow mb-2">01 - About</p>
+          <p class="section-eyebrow mb-2">— About</p>
           <h2 class="section-title">A bit about me</h2>
           <p class="section-subtitle">
             Developer, solution-oriented, and obsessed with the details that make software feel intentional.

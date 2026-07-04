@@ -17,7 +17,7 @@ interface ContactForm {
     <section id="contact" class="section">
       <div class="container">
         <div class="text-center mb-5" appReveal>
-          <p class="section-eyebrow mb-2">05 — Contact</p>
+          <p class="section-eyebrow mb-2">— Contact</p>
           <h2 class="section-title">Get in touch</h2>
           <p class="section-subtitle">
             Have a project in mind or just want to say hello? My inbox is always open.
