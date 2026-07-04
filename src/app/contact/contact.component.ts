@@ -168,7 +168,7 @@ export class ContactComponent {
   errorMessage = signal<string | null>(null);
 
   // PLACE YOUR FORMSPREE FORM ID HERE (e.g., 'xoqyzabc')
-  private formspreeId = 'https://formspree.io/f/xqevwovn'; 
+  private formspreeId = 'xqevwovn'; 
 
   socials = [
     { label: 'GitHub', icon: 'bi-github', url: 'https://github.com/IbbadArshadButt' },
