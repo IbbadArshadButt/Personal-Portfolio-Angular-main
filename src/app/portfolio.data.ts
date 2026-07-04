@@ -43,9 +43,11 @@ export interface NavLink {
 
 export const NAV_LINKS: NavLink[] = [
   { label: 'About', target: 'about' },
-  { label: 'Projects', target: 'projects' },
   { label: 'Skills', target: 'skills' },
   { label: 'Experience', target: 'experience' },
+  { label: 'Projects', target: 'projects' },
+  { label: 'Education', target: 'education' },
+  { label: 'Certifications', target: 'certifications' },
   { label: 'Contact', target: 'contact' },
 ];
 
@@ -59,7 +61,7 @@ export const COMPETENCIES: Competency[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: 'Nexus Dashboard',
+    title: 'Movies Management Platform',
     category: 'Web App',
     icon: 'bi-grid-1x2',
     description:
@@ -161,19 +163,21 @@ export const TECH_CATEGORIES: TechCategory[] = [
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
-    role: 'Frontend Design Intern',
-    company: 'Adroit Light Solutions',
-    period: 'Jan 2025 — April 2025',
+    role: 'Trainee Software Engineer',
+    company: 'CureMD, Pakistan',
+    period: 'Jan 2026 — June 2026',
     location: 'Onsite',
     summary:
-      'Built clean UI components using HTML & vanilla CSS for elegant designs.',
+      'Worked on web-based applications using JavaScript, Angular, C# and .NET. ',
     highlights: [
-      'Got to know about the fundamentals and basics of Web development.',
-      'Gain hands on experience with HTML & CSS for website design.',
-      'Worked under direct supervision of senior developers.',
+      'Developed .NET Web APIs using database first approach utilizing .NET Core with Angular Frontend.',
+      'Contributed to the development and enhancement of CureMD application’s features and functionalities.',
+      'Gained hands-on experience with database operations, debugging, and improving application performance.',
+      'Worked in agile development environment and directly communicated with team members and Project Manager',
+
     ],
-    environment: ['HTML5', 'CSS3', 'JavaScript'],
-    featured: false,
+    environment: ['Angular', 'TypeScript','.NET', 'SQL Server', 'GitHub Actions'],
+    featured: true,
   },
   {
     role: 'PHP Bckend Developer (Intern)',
@@ -191,22 +195,20 @@ export const EXPERIENCE: ExperienceItem[] = [
     featured: false,
   },
   {
-    role: 'Trainee Software Engineer',
-    company: 'CureMD, Pakistan',
-    period: 'Jan 2026 — June 2026',
+    role: 'Frontend Design Intern',
+    company: 'Adroit Light Solutions',
+    period: 'Jan 2025 — April 2025',
     location: 'Onsite',
     summary:
-      'Worked on web-based applications using JavaScript, Angular, C# and .NET. ',
+      'Built clean UI components using HTML & vanilla CSS for elegant designs.',
     highlights: [
-      'Developed .NET Web APIs using database first approach utilizing .NET Core with Angular Frontend.',
-      'Contributed to the development and enhancement of CureMD application’s features and functionalities.',
-      'Gained hands-on experience with database operations, debugging, and improving application performance.',
-      'Worked in agile development environment and directly communicated with team members and Project Manager',
-
+      'Got to know about the fundamentals and basics of Web development.',
+      'Gain hands on experience with HTML & CSS for website design.',
+      'Worked under direct supervision of senior developers.',
     ],
-    environment: ['Angular', 'TypeScript','.NET', 'SQL Server', 'GitHub Actions'],
-    featured: true,
-  },
+    environment: ['HTML5', 'CSS3', 'JavaScript'],
+    featured: false,
+  }
 ];
 
 export const ABOUT_BIO =

@@ -37,11 +37,6 @@ import { NAV_LINKS } from '../portfolio.data';
                 </a>
               </li>
             }
-            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a class="btn btn-accent btn-sm px-3" href="#contact" (click)="closeMenu()">
-                Let's Talk
-              </a>
-            </li>
           </ul>
         </div>
       </div>

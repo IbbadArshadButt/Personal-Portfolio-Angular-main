@@ -30,27 +30,35 @@ interface ContactForm {
             <h3 class="h5 mb-4">Let's Connect</h3>
 
             <div class="d-flex flex-column gap-3 mb-4">
-              <a class="contact-row text-decoration-none" href="mailto:hello&#64;ibbadarshad.dev">
+              <a class="contact-row text-decoration-none text-white" href="mailto:ibbadbutt3521@gmail.com">
                 <span class="contact-icon"><i class="bi bi-envelope"></i></span>
                 <span>
                   <span class="d-block text-muted" style="font-size: 0.78rem;">Email</span>
-                  <span class="text-primary fw-medium">hello&#64;ibbadarshad.dev</span>
+                  <span class="text-white fw-medium">ibbadbutt3521@gmail.com</span>
                 </span>
               </a>
 
-              <a class="contact-row text-decoration-none" href="https://linkedin.com" target="_blank" rel="noopener">
+              <a class="contact-row text-decoration-none text-white" href="https://linkedin.com/in/ibbad-arshad" target="_blank" rel="noopener">
                 <span class="contact-icon"><i class="bi bi-linkedin"></i></span>
                 <span>
                   <span class="d-block text-muted" style="font-size: 0.78rem;">LinkedIn</span>
-                  <span class="text-primary fw-medium">linkedin.com/in/ibbadarshad</span>
+                  <span class="text-white fw-medium">linkedin.com/in/ibbad-arshad</span>
                 </span>
               </a>
 
-              <a class="contact-row text-decoration-none" href="https://github.com" target="_blank" rel="noopener">
+              <a class="contact-row text-decoration-none text-white" href="https://github.com/IbbadArshadButt" target="_blank" rel="noopener">
                 <span class="contact-icon"><i class="bi bi-github"></i></span>
                 <span>
                   <span class="d-block text-muted" style="font-size: 0.78rem;">GitHub</span>
-                  <span class="text-primary fw-medium">github.com/ibbadarshad</span>
+                  <span class="text-white fw-medium">github.com/IbbadArshadButt</span>
+                </span>
+              </a>
+
+              <a class="contact-row text-decoration-none text-white" href="https://wa.me/923081200084" target="_blank" rel="noopener">
+                <span class="contact-icon" style="background-color: rgba(37, 211, 102, 0.1); border-color: rgba(37, 211, 102, 0.2);"><i class="bi bi-whatsapp" style="color: var(--accent, #ffc107);"></i></span>
+                <span>
+                  <span class="d-block text-muted" style="font-size: 0.78rem;">WhatsApp</span>
+                  <span class="text-white fw-medium">Chat on WhatsApp</span>
                 </span>
               </a>
             </div>
@@ -155,10 +163,10 @@ export class ContactComponent {
   sending = signal(false);
 
   socials = [
-    { label: 'GitHub', icon: 'bi-github', url: 'https://github.com' },
-    { label: 'LinkedIn', icon: 'bi-linkedin', url: 'https://linkedin.com' },
-    { label: 'X', icon: 'bi-twitter-x', url: 'https://x.com' },
-    { label: 'Email', icon: 'bi-envelope', url: 'mailto:hello@example.com' },
+    { label: 'GitHub', icon: 'bi-github', url: 'https://github.com/IbbadArshadButt' },
+    { label: 'LinkedIn', icon: 'bi-linkedin', url: 'https://linkedin.com/in/ibbad-arshad' },
+    { label: 'X', icon: 'bi-twitter-x', url: 'https://x.com/ibbadbutt085' },
+    { label: 'Email', icon: 'bi-envelope', url: 'mailto:ibbadbutt3521@gmail.com' },
   ];
 
   submit(f: NgForm): void {

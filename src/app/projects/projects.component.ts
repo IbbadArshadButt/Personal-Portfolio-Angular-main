@@ -11,7 +11,7 @@ import { PROJECTS } from '../portfolio.data';
       <div class="container">
         <div class="text-center mb-5" appReveal>
           <p class="section-eyebrow mb-2">04 — Projects</p>
-          <h2 class="section-title">Featured work</h2>
+          <h2 class="section-title">Featured Projects</h2>
           <p class="section-subtitle">
             A selection of applications and systems I've designed, built, and deployed.
           </p>

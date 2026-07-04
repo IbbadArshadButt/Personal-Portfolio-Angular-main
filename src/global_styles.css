@@ -11,10 +11,10 @@
   --text-primary: #e6edf3;
   --text-secondary: #9ba8b8;
   --text-muted: #6b7785;
-  --accent: #6366f1;
-  --accent-strong: #4f46e5;
-  --accent-soft: rgba(99, 102, 241, 0.12);
-  --accent-glow: rgba(99, 102, 241, 0.35);
+  --accent: #d3a20e;
+  --accent-strong: #c29305;  /* A clean, rich dark amber for active/hover states */
+  --accent-soft: rgba(255, 193, 7, 0.10);  /* Elegant, low-opacity background tint */
+  --accent-glow: rgba(255, 193, 7, 0.35);  /* Vibrant translucent glow for shadows/highlights */
 }
 
 * {

@@ -26,11 +26,11 @@ import { Component } from '@angular/core';
             </p>
 
             <div class="d-flex flex-wrap justify-content-center gap-3">
-              <a class="btn btn-outline-accent" href="#resume">
-                <i class="bi bi-file-earmark-text me-2"></i>View Resume
-              </a>
               <a class="btn btn-accent" href="#contact">
                 <i class="bi bi-send me-2"></i>Get in Touch
+              </a>
+              <a class="btn btn-outline-accent" href="#experience">
+                View my Work
               </a>
             </div>
 
@@ -48,9 +48,10 @@ import { Component } from '@angular/core';
   `,
 })
 export class HeroComponent {
-  socials = [
-    { label: 'GitHub', icon: 'bi-github', url: 'https://github.com' },
-    { label: 'LinkedIn', icon: 'bi-linkedin', url: 'https://linkedin.com' },
-    { label: 'Email', icon: 'bi-envelope', url: 'mailto:hello@example.com' },
+    socials = [
+    { label: 'GitHub', icon: 'bi-github', url: 'https://github.com/IbbadArshadButt' },
+    { label: 'LinkedIn', icon: 'bi-linkedin', url: 'https://linkedin.com/in/ibbad-arshad' },
+    { label: 'Email', icon: 'bi-envelope', url: 'mailto:ibbadbutt3521@gmail.com' },
+    { label: 'WhatsApp', icon: 'bi-whatsapp', url: 'https://wa.me/923081200084' },
   ];
 }

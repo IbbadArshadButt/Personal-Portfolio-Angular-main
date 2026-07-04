@@ -37,13 +37,14 @@ import { TECH_CATEGORIES } from '../portfolio.data';
                 @if (active() === cat.key) {
                   <div class="d-flex flex-column gap-4">
                     @for (skill of cat.skills; track skill.name) {
-                      <div>
+                      <div class="skill-item">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                           <span class="fw-semibold">{{ skill.name }}</span>
                           <span class="text-accent fw-semibold" style="font-size: 0.9rem;">{{ skill.level }}%</span>
                         </div>
                         <div class="progress-thin">
-                          <div class="progress-bar" [style.width.%]="skill.level"></div>
+                          <!-- Fixed syntax for modern explicit string width concatenation -->
+                          <div class="progress-bar" [style.width]="skill.level + '%'"></div>
                         </div>
                       </div>
                     }
@@ -56,6 +57,31 @@ import { TECH_CATEGORIES } from '../portfolio.data';
       </div>
     </section>
   `,
+  styles: [`
+    /* Target container for custom progress bar */
+    .progress-thin {
+      background-color: var(--bg-neutral-dark, rgba(255, 255, 255, 0.05));
+      border-radius: 4px;
+      overflow: hidden;
+      height: 6px;
+      width: 100%;
+    }
+
+    /* Fixed progress line filling & smooth animation transition */
+    .progress-bar {
+      background-color: var(--accent-color, #6366f1);
+      height: 100%;
+      border-radius: 4px;
+      /* Animates the line fill seamlessly when tabs switch */
+      transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Interactive hover state highlighting active progress bars */
+    .skill-item:hover .progress-bar {
+      filter: brightness(1.2);
+      box-shadow: 0 0 8px var(--accent-color, #6366f1);
+    }
+  `]
 })
 export class SkillsComponent {
   categories = TECH_CATEGORIES;
