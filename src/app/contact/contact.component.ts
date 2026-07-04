@@ -25,7 +25,6 @@ interface ContactForm {
         </div>
 
         <div class="row g-4 justify-content-center">
-          <!-- Left: Let's Connect -->
           <div class="col-lg-5" appReveal>
             <h3 class="h5 mb-4">Let's Connect</h3>
 
@@ -72,7 +71,6 @@ interface ContactForm {
             </div>
           </div>
 
-          <!-- Right: Send Me a Message -->
           <div class="col-lg-7" appReveal [revealDelay]="120">
             <h3 class="h5 mb-4">Send Me a Message</h3>
 
@@ -139,6 +137,12 @@ interface ContactForm {
                     </div>
                   </div>
 
+                  @if (errorMessage()) {
+                    <div class="alert alert-danger mt-3 mb-0 small py-2" role="alert">
+                      {{ errorMessage() }}
+                    </div>
+                  }
+
                   <div class="d-flex justify-content-end mt-4">
                     <button class="btn btn-accent px-4" type="submit" [disabled]="sending()">
                       @if (sending()) {
@@ -161,6 +165,10 @@ export class ContactComponent {
   form: ContactForm = { name: '', email: '', subject: '', message: '' };
   submitted = signal(false);
   sending = signal(false);
+  errorMessage = signal<string | null>(null);
+
+  // PLACE YOUR FORMSPREE FORM ID HERE (e.g., 'xoqyzabc')
+  private formspreeId = 'YOUR_FORM_ID_HERE'; 
 
   socials = [
     { label: 'GitHub', icon: 'bi-github', url: 'https://github.com/IbbadArshadButt' },
@@ -174,16 +182,41 @@ export class ContactComponent {
       f.control.markAllAsTouched();
       return;
     }
+    
     this.sending.set(true);
-    // Simulate async send
-    setTimeout(() => {
+    this.errorMessage.set(null);
+
+    // Asynchronously POST form data to Formspree API directly
+    fetch(`https://formspree.io/f/${this.formspreeId}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name: this.form.name,
+        email: this.form.email,
+        subject: this.form.subject,
+        message: this.form.message
+      })
+    })
+    .then(response => {
       this.sending.set(false);
-      this.submitted.set(true);
-    }, 700);
+      if (response.ok) {
+        this.submitted.set(true);
+      } else {
+        this.errorMessage.set('Oops! There was a problem sending your message. Please try again.');
+      }
+    })
+    .catch(error => {
+      this.sending.set(false);
+      this.errorMessage.set('Network error. Please check your connection and try again.');
+    });
   }
 
   reset(): void {
     this.form = { name: '', email: '', subject: '', message: '' };
     this.submitted.set(false);
+    this.errorMessage.set(null);
   }
 }
