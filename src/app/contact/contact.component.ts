@@ -194,11 +194,13 @@ export class ContactComponent {
         'Accept': 'application/json'
       },
       body: JSON.stringify({
-        name: this.form.name,
-        email: this.form.email,
-        subject: this.form.subject,
-        message: this.form.message
-      })
+    'Form Source': 'Main Portfolio Contact Section',
+    'Visitor Name': this.form.name,
+    'Email Address': this.form.email,
+    'Subject Line': this.form.subject,
+    'Message Details': this.form.message,
+    'Submission Date': new Date().toLocaleString('en-US', { timeZone: 'Asia/Karachi' }) + ' PKT'
+  })
     })
     .then(response => {
       this.sending.set(false);
